@@ -1,0 +1,157 @@
+/* 공용 스타일 */
+body { margin: 0; font-family: 'Noto Sans KR', sans-serif; 
+    background-color: #000; 
+    color: #fff;
+    display: block;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-width: 360px;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-size-adjust: 100%;
+}
+
+/* 1. Hero Section */
+.hero-section { 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    min-width: 1980px;
+    min-height: 1130px;
+    overflow: hidden;
+    
+}
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    
+    background-color: #000;
+}
+#main-video { 
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh; 
+    object-fit: cover;
+    z-index: 1;
+    
+}
+#subtitle-video {
+    width: 1100px;
+    height: 460px;
+    top: 90px;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    scale: 0.9;
+    
+}
+.hero-content {
+    position: absolute;
+    z-index: 100;
+    top: 450px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.btn-brand {
+    /* 1. 크기 설정 (피그마의 크기와 동일하게) */
+    width: 230px;
+    height: 76px;
+    
+
+    /* 2. 이미지 입히기 */
+    background-image: url(../images/브랜드홈.png); /* 추출한 이미지 경로 */
+    background-size: contain;    /* 이미지가 버튼 안에 다 들어오도록 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    overflow: hidden;
+    text-indent: -9999px;
+
+    /* 3. 기본 스타일 제거 및 텍스트 설정 */
+    border: none;
+    background-color: transparent; /* 배경색 투명하게 */
+    color: #fff;                   /* 글자색 */
+    font-weight: bold;
+    cursor: pointer;               /* 마우스 올렸을 때 손가락 모양 */
+    
+    /* 텍스트 위치 미세 조정이 필요할 때 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* 마우스 호버 효과 (선택 사항) */
+.btn-brand:hover {
+    filter: brightness(1.2); /* 살짝 밝게 해서 반응 주기 */
+    transition: 0.3s;
+}
+.card-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+    position: relative;
+    bottom: 50px; 
+    width: 100%;
+    z-index: 3;
+    top: 682px;
+}
+.card { 
+    width: 336px; 
+    height: 348px; 
+    background: rgba(0,0,0,0.6); 
+    border: 1px solid #444; 
+    
+}
+
+/* 2. News Section */
+.news-section { 
+    padding: 100px 0; 
+    text-align: center; 
+    background: url('news-bg.jpg') no-repeat center/cover; }
+.news-grid { 
+    display: flex; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 40px; }
+
+/* 3. Field Section (패러랙스 효과 혹은 와이드 배경) */
+.field-section {
+    height: 800px; 
+    background: url('field-bg.jpg') no-repeat center/cover;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+/* 4. Guide Slider (Flexbox 중심 배치) */
+.guide-slider { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 30px; 
+    margin: 50px 0; 
+}
+.slider-item.active { 
+    width: 600px; 
+    height: 350px; 
+    border: 2px solid #ceab5d; 
+    transform: scale(1.1); 
+}
+.slider-item.side { 
+    width: 400px; 
+    height: 250px; 
+    opacity: 0.5; }
